@@ -1,15 +1,13 @@
 import { Header } from '@/components/header';
-import { TextToSign } from '@/components/text-to-sign';
-import { SignToText } from '@/components/sign-to-text';
+import { SignToSign } from '@/components/sign-to-sign';
 
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-background">
       <Header />
-      <main className="flex-1 container mx-auto p-4 md:p-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
-          <TextToSign />
-          <SignToText />
+      <main className="flex-1 container mx-auto p-4 md:p-8 flex items-center justify-center">
+        <div className="w-full max-w-2xl">
+          <SignToSign />
         </div>
       </main>
       <footer className="py-4 text-center text-sm text-muted-foreground">

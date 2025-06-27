@@ -8,23 +8,18 @@
  */
 
 import {ai} from '@/ai/genkit';
-import {z} from 'genkit';
+import {
+  SignToTextTranslationInputSchema,
+  type SignToTextTranslationInput,
+  SignToTextTranslationOutputSchema,
+  type SignToTextTranslationOutput,
+} from '@/ai/schemas';
 
-const SignToTextTranslationInputSchema = z.object({
-  videoDataUri: z
-    .string()
-    .describe(
-      "A video of sign language, as a data URI that must include a MIME type and use Base64 encoding. Expected format: 'data:<mimetype>;base64,<encoded_data>'."
-    ),
-});
-export type SignToTextTranslationInput = z.infer<typeof SignToTextTranslationInputSchema>;
+export type {SignToTextTranslationInput, SignToTextTranslationOutput};
 
-const SignToTextTranslationOutputSchema = z.object({
-  text: z.string().describe('The translated text from the sign language video.'),
-});
-export type SignToTextTranslationOutput = z.infer<typeof SignToTextTranslationOutputSchema>;
-
-export async function signToTextTranslation(input: SignToTextTranslationInput): Promise<SignToTextTranslationOutput> {
+export async function signToTextTranslation(
+  input: SignToTextTranslationInput
+): Promise<SignToTextTranslationOutput> {
   return signToTextTranslationFlow(input);
 }
 

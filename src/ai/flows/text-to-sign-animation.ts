@@ -12,21 +12,14 @@
 import {ai} from '@/ai/genkit';
 import {z} from 'genkit';
 import wav from 'wav';
+import {
+  TextToSignAnimationInputSchema,
+  type TextToSignAnimationInput,
+  TextToSignAnimationOutputSchema,
+  type TextToSignAnimationOutput,
+} from '@/ai/schemas';
 
-const TextToSignAnimationInputSchema = z.object({
-  text: z.string().describe('The text to be translated into sign language animation.'),
-});
-export type TextToSignAnimationInput = z.infer<typeof TextToSignAnimationInputSchema>;
-
-const TextToSignAnimationOutputSchema = z.object({
-  animationDataUri: z
-    .string()
-    .describe(
-      'A data URI containing the animated sign language representation of the input text.'
-    ),
-  audioDataUri: z.string().describe('A data URI containing the audio representation of the input text.'),
-});
-export type TextToSignAnimationOutput = z.infer<typeof TextToSignAnimationOutputSchema>;
+export type {TextToSignAnimationInput, TextToSignAnimationOutput};
 
 export async function textToSignAnimation(
   input: TextToSignAnimationInput
@@ -149,4 +142,3 @@ const textToSignAnimationFlow = ai.defineFlow(
     };
   }
 );
-
