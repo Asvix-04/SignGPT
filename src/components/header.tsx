@@ -7,7 +7,7 @@ export function Header() {
         <div className="p-2 bg-primary rounded-lg">
           <Hand className="w-6 h-6 text-primary-foreground" />
         </div>
-        <h1 className="text-2xl font-bold text-foreground tracking-tight">SignSpeak</h1>
+        <h1 className="text-2xl font-bold text-foreground tracking-tight">SignViz</h1>
       </div>
     </header>
   );

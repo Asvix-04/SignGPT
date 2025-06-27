@@ -3,7 +3,7 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster"
 
 export const metadata: Metadata = {
-  title: 'SignSpeak',
+  title: 'SignViz',
   description: 'AI-powered sign language translation for seamless communication.',
 };
 

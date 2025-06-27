@@ -11,7 +11,7 @@ export default function Home() {
         </div>
       </main>
       <footer className="py-4 text-center text-sm text-muted-foreground">
-        <p>Built with passion for accessibility. © 2024 SignSpeak.</p>
+        <p>Built with passion for accessibility. © 2024 SignViz.</p>
       </footer>
     </div>
   );
