@@ -31,6 +31,7 @@ const signToTextTranslationFlow = ai.defineFlow(
   },
   async input => {
     const response = await ai.generate({
+      model: 'googleai/gemini-1.5-pro-latest',
       prompt: [
         {
           text: 'You are a sign language expert. You will watch the following video and translate the sign language into text. Output only the translated text, and nothing else.',
