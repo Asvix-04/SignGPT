@@ -1,7 +1,7 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
-import { useFormState, useFormStatus } from 'react-dom';
+import { useActionState, useEffect, useRef, useState } from 'react';
+import { useFormStatus } from 'react-dom';
 import Image from 'next/image';
 import { MessageSquare, Settings, Loader2, Info, Volume2 } from 'lucide-react';
 import { handleTextToSign } from '@/app/actions';
@@ -37,7 +37,7 @@ function SubmitButton() {
 }
 
 export function TextToSign() {
-  const [state, formAction] = useFormState(handleTextToSign, initialState);
+  const [state, formAction] = useActionState(handleTextToSign, initialState);
   const { toast } = useToast();
   const formRef = useRef<HTMLFormElement>(null);
   const audioRef = useRef<HTMLAudioElement>(null);
