@@ -86,30 +86,6 @@ async function toWav(
   });
 }
 
-const generateAnimationPrompt = ai.definePrompt({
-  name: 'generateAnimationPrompt',
-  input: {schema: TextToSignAnimationInputSchema},
-  output: {schema: z.string().describe('A textual description of the animation')},
-  prompt: `You are an expert animator of sign language.
-
-  Given the text: "{{text}}", describe the animation to display the text in sign language. 
-  Be as detailed as possible in terms of sequence of sign and transitions.
-  The description should not contain any information about the viewpoint or camera movements.
-  The description should only describe the sequence of signs. Do not include anything else.`, // Removed the system prompt as it's now part of the base prompt.
-});
-
-const generateImagePrompt = ai.definePrompt({
-  name: 'generateImagePrompt',
-  input: {schema: z.object({animationDescription: z.string()})},
-  output: {schema: z.string().describe('A textual description of the image')},
-  prompt: `You are an expert image generator.
-
-  Given the animation description: "{{animationDescription}}", create a prompt suitable for image generation of a single frame representing the sign language.
-
-  The prompt description should be about a frame of an animation in sign language with a neutral background.
-  Do not include anything else.`, // Removed the system prompt as it's now part of the base prompt.
-});
-
 const textToSignAnimationFlow = ai.defineFlow(
   {
     name: 'textToSignAnimationFlow',
@@ -117,14 +93,13 @@ const textToSignAnimationFlow = ai.defineFlow(
     outputSchema: TextToSignAnimationOutputSchema,
   },
   async input => {
-    const animationDescription = (await generateAnimationPrompt(input)).output!;
-    const imageDescription = (await generateImagePrompt({animationDescription})).output!;
-
+    const imageGenerationPrompt = `An animated frame of a person demonstrating the sign for "${input.text}" in American Sign Language. The person should be clear and expressive, against a neutral, simple background. Focus on the hand gestures and facial expression.`;
+    
     const [{media}, {media: audio}] = await Promise.all([
       ai.generate({
         // IMPORTANT: ONLY the googleai/gemini-2.0-flash-preview-image-generation model is able to generate images. You MUST use exactly this model to generate images.
         model: 'googleai/gemini-2.0-flash-preview-image-generation',
-        prompt: imageDescription,
+        prompt: imageGenerationPrompt,
         config: {
           responseModalities: ['TEXT', 'IMAGE'], // MUST provide both TEXT and IMAGE, IMAGE only won't work
         },
