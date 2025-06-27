@@ -23,15 +23,6 @@ export async function signToTextTranslation(
   return signToTextTranslationFlow(input);
 }
 
-const prompt = ai.definePrompt({
-  name: 'signToTextTranslationPrompt',
-  input: {schema: SignToTextTranslationInputSchema},
-  output: {schema: SignToTextTranslationOutputSchema},
-  prompt: `You are a sign language expert.  You will watch the following video and translate the sign language into text.
-
-Video: {{media url=videoDataUri}}`,
-});
-
 const signToTextTranslationFlow = ai.defineFlow(
   {
     name: 'signToTextTranslationFlow',
@@ -39,7 +30,19 @@ const signToTextTranslationFlow = ai.defineFlow(
     outputSchema: SignToTextTranslationOutputSchema,
   },
   async input => {
-    const {output} = await prompt(input);
-    return output!;
+    const response = await ai.generate({
+      prompt: [
+        {
+          text: 'You are a sign language expert. You will watch the following video and translate the sign language into text. Output only the translated text, and nothing else.',
+        },
+        {media: {url: input.videoDataUri}},
+      ],
+    });
+
+    const text = response.text;
+    if (!text) {
+      throw new Error('Failed to get translation from model.');
+    }
+    return {text};
   }
 );
