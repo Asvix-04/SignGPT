@@ -1,4 +1,4 @@
-#Signviz-chatbot
+# Signviz-chatbot
 
 Let's start from a clean slate, we have chatgpt for general queries, coding problems....any problem it has solution for everything. In recent times every bot like generally if we see the trajectory of the AI bots, its largely focusing the majority group i.e people/humans without disablities but what about those who cannot speak,listen and see? They are also a part of the world, they should also get the leisure of solving their day-to-day problems with a conversational bot.
 
@@ -16,7 +16,9 @@ Add ons?
 Apart from my ranting i would love to have some contributors to this project, if you think you have what we need then please make a pull request stating your additions and if you've some cool ideas as well to integrate with Signviz, drop a mail at agvskanda@gmail.com
 
 
-There could be 2 projects with this particular idea, one is the above described one and the another one could be:
+# There could be 2 projects with this particular idea, one is the above described one and the another one could be:
+
+
 
 # Signviz Meet
 
