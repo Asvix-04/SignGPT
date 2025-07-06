@@ -1,4 +1,4 @@
-Let's start from a clean slate, we have chatgpt for general queries, coding problems....any problem it has solution for everything. In recent times every bot like generally if we see the trajectory of the AI bots, its largely focusing the majority group i.e people/humans without disablities but what about those who cannot speak,listen and see? They are also a part of the world, they should also get the leisure of solving their day-to-day problems with a conversational bot.   
+Let's start from a clean slate, we have chatgpt for general queries, coding problems....any problem it has solution for everything. In recent times every bot like generally if we see the trajectory of the AI bots, its largely focusing the majority group i.e people/humans without disablities but what about those who cannot speak,listen and see? They are also a part of the world, they should also get the leisure of solving their day-to-day problems with a conversational bot.
 
 ### My goal with this venture is to hit the minority with a transformational change which (maybe) no one thought of, so lets just build what no one has done it before!
 
