@@ -1,4 +1,4 @@
-# Signviz-chatbot
+# SignGPT
 
 Let's start from a clean slate, we have chatgpt for general queries, coding problems....any problem it has solution for everything. In recent times every bot like generally if we see the trajectory of the AI bots, its largely focusing the majority group i.e people/humans without disablities but what about those who cannot speak,listen and see? They are also a part of the world, they should also get the leisure of solving their day-to-day problems with a conversational bot.
 
@@ -13,14 +13,14 @@ Add ons?
 > users can choose AI avatars according to their characters (for example: charming, savvy, cool, humorous)
 > AI avatars can be inspired from Marvel/DC charaacter, personally i would like an AI avatar of JOKER & THE BATMAN! (i'mma an ex-marvel fan btw)
 
-Apart from my ranting i would love to have some contributors to this project, if you think you have what we need then please make a pull request stating your additions and if you've some cool ideas as well to integrate with Signviz, drop a mail at agvskanda@gmail.com
+Apart from my ranting i would love to have some contributors to this project, if you think you have what we need then please make a pull request stating your additions and if you've some cool ideas as well to integrate with SignGPT, drop a mail at agvskanda@gmail.com
 
 
 # There could be 2 projects with this particular idea, one is the above described one and the another one could be:
 
 
 
-# Signviz Meet
+# Sign-AI Meet
 
 **SignViz Meet** is a real-time, sign language–enabled video conferencing platform designed specifically for deaf and hard-of-hearing users. It supports gesture recognition, speech-to-sign translation, and accessibility-first communication to enable natural, inclusive conversations online.
 
@@ -53,7 +53,7 @@ Apart from my ranting i would love to have some contributors to this project, if
 ## Installation
 
 ```bash
-git clone https://github.com/Asvix-04/Signviz.git
-cd SignVizMeet
+git clone https://github.com/Asvix-04/SignGPT.git
+cd Sign-AIMeet
 npm install
 npm run dev
