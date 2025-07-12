@@ -41,7 +41,7 @@ Apart from my ranting i would love to have some contributors to this project, if
 
 | Layer           | Tech                                     |
 |----------------|------------------------------------------|
-| Frontend        | React.js + Tailwind CSS                  |
+| Frontend        | React.js + Tailwind + CSS                |
 | Backend         | Node.js or FastAPI                       |
 | Video Layer     | WebRTC (100ms / Daily.co / Twilio)       |
 | Sign Detection  | MediaPipe / OpenPose + TensorFlow        |
