@@ -6,7 +6,7 @@ Let's start from a clean slate, we have chatgpt for general queries, coding prob
 
 A constructual vision of mine with this project is to have a sign to sign feature with an integrated bot having an AI avatar. like user will sign to the bot asking a question and the bot will answer it with a sign language response using an AI avatar. If the question's answer cannot be interpreted in sign language then the bot will automatically give two options either get the reponse in textual manner or in audio format.
 
-Add ons? 
+Add ons?
 
 > Users could choose and modify the AI avatars like facially.
 > users can increase or decrease the conversationallity and user friendliness of the bot.
