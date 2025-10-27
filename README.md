@@ -20,7 +20,7 @@ Apart from my ranting i would love to have some contributors to this project, if
 
 
 
-# Sign-AI Meet
+# SignViz Meet
 
 **SignViz Meet** is a real-time, sign language–enabled video conferencing platform designed specifically for deaf and hard-of-hearing users. It supports gesture recognition, speech-to-sign translation, and accessibility-first communication to enable natural, inclusive conversations online.
 
@@ -49,11 +49,3 @@ Apart from my ranting i would love to have some contributors to this project, if
 | Sign Rendering  | 3D Avatar (Three.js or Unity WebGL)      |
 
 ---
-
-## Installation
-
-```bash
-git clone https://github.com/Asvix-04/SignGPT.git
-cd Sign-AIMeet
-npm install
-npm run dev
